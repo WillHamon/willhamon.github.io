@@ -1,4 +1,8 @@
-@font-face { font-family: ARCADECLASSIC; src: url("./../fonts/ARCADECLASSIC.ttf") }
+@font-face
+{
+    font-family: ARCADECLASSIC;
+    src: url("../willhamon.github.io/fonts/ARCADECLASSIC.ttf") format('truetype');
+}
 
 head
 {
