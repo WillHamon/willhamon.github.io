@@ -1,6 +1,10 @@
 *
 {
     font-family: fantasy;
+}
+
+header > div > p
+{
     margin: 0;
     padding: 0;
 }
@@ -21,8 +25,36 @@ body
     font-size: 3vw;
 }
 
-#projects
+#project
 {
     font-size: 2vw;
+}
+
+#projects
+{
+    text-align: center;
+}
+
+th
+{
+    width: 50%;
+}
+
+th > a
+{
+    color: black;
+    font-size: 2vw;
+}
+
+#cellcycle > img
+{
+    width: 677px;
+    height: 384px;
+}
+
+#flappybird > img
+{
+    width: 376px;
+    height: 282px;
 }
 
