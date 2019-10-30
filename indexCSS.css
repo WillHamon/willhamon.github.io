@@ -18,6 +18,8 @@ body
 {
     text-align: center;
     font-size: 5vw;
+    color: #8c8c8c;
+    background-color: black;
 }
 
 #title > p > small
@@ -35,26 +37,39 @@ body
     text-align: center;
 }
 
-th
+a:link
 {
-    width: 50%;
+  text-decoration: none;
+  color: black;
 }
 
-th > a
+a:visited
 {
-    color: black;
-    font-size: 2vw;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover
+{
+  text-decoration: underline;
+  color: black;
+}
+
+a:active
+{
+  text-decoration: underline;
+  color: black;
 }
 
 #cellcycle > img
 {
-    width: 677px;
-    height: 384px;
+    width: 50%;
+    height: 50%;
 }
 
 #flappybird > img
 {
-    width: 376px;
-    height: 282px;
+    width: 30%;
+    height: 30%;
 }
 
