@@ -20,7 +20,7 @@ next.addEventListener('click', function() {
     description.innerHTML = descriptions[currentImg % 6];
 });
 back.addEventListener('click', function() {
-    currentImg -= 1;
+    if(currentImg != 0) currentImg -= 1;
     phase.innerHTML = phases[currentImg % 6];
     img.src = imgs[currentImg % 6];
     description.innerHTML = descriptions[currentImg % 6];
