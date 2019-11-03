@@ -6,7 +6,7 @@
 header > p
 {
     margin: 0;
-    padding: 1;
+    padding: 0;
 }
 
 body
@@ -32,28 +32,4 @@ body
 #centered
 {
    text-align: center; 
-}
-
-#img
-{
-    border: 2px solid black;
-}
-
-#phase
-{
-    font-size: 2vw;
-    border: 2px solid black;
-    margin: 0 32%;
-}
-
-#text
-{
-    border: 2px solid black;
-    margin: 0 32%;
-}
-
-.button
-{
-    width: 5%;
-    font-size: 1.5vw;
 }
