@@ -50,6 +50,7 @@ body
 {
     border: 2px solid black;
     margin: 0 32%;
+    font-size: 1vw;
 }
 
 .button
