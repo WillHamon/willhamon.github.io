@@ -124,13 +124,40 @@ function getCheckedValue(radioName){
 
 function checkQuestions(){
     var score = 0;
+    var incorrectQuestions = [];
+    var answers = [];
 
-    for(x = 0; x < questions.length; x++)
-    {
-        if(getCheckedValue("question" + x) == questions[x].correctAnswer) score++;
+    for(x = 0; x < questions.length; x++){
+        if(getCheckedValue("question" + x) == questions[x].correctAnswer){
+            score++;
+        } else{
+            incorrectQuestions.push(questions[x]);
+            answers.push(getCheckedValue("question" + x));
+        }
     }
 
     quiz.innerHTML = "<div style='text-align: center;'><h1>" + score + "/" + questions.length + "&ensp;|&ensp;" + score/questions.length*100 + "%</h1><a href='quiz.html'>retry</a> | <a href='../home.html'>home</a></div>";
+
+    if(answers.length > 0)
+    {
+        quiz.innerHTML += "<div style='text-align: center;'><h2>Questions you missed:</h2></div>";
+    }
+
+    incorrectQuestions.forEach(
+        (section, num) => {
+            quiz.innerHTML += "<p>" + section.question + "</p>";
+            for(letter in section.answers){
+                if(letter == answers[num])
+                {
+                    quiz.innerHTML += "<div style='font-family: arial; color: red;'>" + section.answers[letter] + "</div>";
+                } else if(letter == section.correctAnswer){
+                    quiz.innerHTML += "<div style='font-family: arial; color: green;'>" + section.answers[letter] + "</div>";
+                } else{
+                    quiz.innerHTML += "<div style='font-family: arial;'>" + section.answers[letter] + "</div>";
+                }
+            }
+        }
+    );
 }
 
 window.onload = function(){
