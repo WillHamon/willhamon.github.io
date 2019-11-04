@@ -1,7 +1,7 @@
 var quiz = document.getElementById("quiz");
 const questions = [
   {
-    question: "How much time does the cell stay in Interphase?",
+    question: "How long does the cell stay in Interphase?",
     answers: {
       a: "75%",
       b: "90%",
@@ -113,7 +113,7 @@ function buildQuestions(){
         }
     );
 
-    quiz.innerHTML += "<button id='submit'>submit</button>";
+    quiz.innerHTML += "<div style='text-align: center;'><button id='submit'>submit</button></div>";
 }
 
 function getCheckedValue(radioName){
@@ -130,7 +130,7 @@ function checkQuestions(){
         if(getCheckedValue("question" + x) == questions[x].correctAnswer) score++;
     }
 
-    quiz.innerHTML = "<h1>" + score + "/" + questions.length + "</h1>" + "<a href='quiz.html'>retry</a> | <a href='../home.html'>home</a>";
+    quiz.innerHTML = "<div style='text-align: center;'><h1>" + score + "/" + questions.length + "&ensp;|&ensp;" + score/questions.length*100 + "%</h1><a href='quiz.html'>retry</a> | <a href='../home.html'>home</a></div>";
 }
 
 window.onload = function(){
