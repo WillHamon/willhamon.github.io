@@ -1,21 +1,23 @@
-//https://random-word-api.herokuapp.com/key?
-const wordApiKey = "YD8P83VM";
+var div = document.getElementById("answer");
+var key = document.getElementById("key");
 
 var gen = function()
 {
+    if(key.value == "") return;
+
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function()
     {
         if(xmlHttp.readyState == 4 && xmlHttp.status == 200)
         {
             const json = JSON.parse(xmlHttp.responseText);
-            document.body.innerHTML = "";
+            div.innerHTML = "<br>";
 
-            json.forEach(word => document.body.innerHTML += "<b>" + word + "-</b>" + getWordDetails(word));
+            json.forEach(word => div.innerHTML += "<b>" + word + "-</b>" + getWordDetails(word));
         }
     }
 
-    xmlHttp.open("GET", "https://random-word-api.herokuapp.com/word?key=" + wordApiKey + "&number=10", true); // true for asynchronous
+    xmlHttp.open("GET", "https://random-word-api.herokuapp.com/word?key=" + key.value + "&number=10", true); // true for asynchronous
     xmlHttp.send(null);
 }
 
