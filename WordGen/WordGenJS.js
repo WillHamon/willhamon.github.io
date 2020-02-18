@@ -31,7 +31,7 @@ var getWordDef = function(word)
 
 var getWordSyn = function(word)
 {
-    return "<a href='https://www.thesarus.com/browse/" + word + "' target='_blank'>synonyms and antonyms</a> ";
+    return "<a href='https://www.thesaurus.com/browse/" + word + "' target='_blank'>synonyms and antonyms</a> ";
 }
 
 var getWordDetails = function(word)
