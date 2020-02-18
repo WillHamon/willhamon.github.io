@@ -2,32 +2,35 @@
 <html>
     <head>
         <title>Flappy Bird</title>
-        <link rel="stylesheet" type="text/css" href="Flappy_BirdCSS.css"/>
+        <link rel="stylesheet" type="text/css" href="../stylesheets/flappyBird.css"/>
+        <link rel="stylesheet" type="text/css" href="../stylesheets/global.css"/>
         <link rel="icon" href="../icon.png">
-
-        <a href="../index.html">back</a>
     </head>
 
     <body>
-        <header>
-            <div id="title">
-                <p>Flappy Bird<small> By Will Hamon</small></p>
+        <ul id="bar">
+            <li class="bar"><a href="https://willhamon.github.io/FlappyBird/play.html">Flappy Bird</a></li>
+            <li class="bar"><a href="https://willhamon.github.io/TheCellCycle/TheCellCycle.html">Cell Cycle</a></li>
+            <li class="bar"><a href="https://willhamon.github.io/WordGen/WordGen.html">WordGen</a></li>
+            <li class="bar"><a href="https://willhamon.github.io/">Home</a></li>
+            <li class="bar" id="title"><p>Will Hamon</p></li>
+        </ul>
+
+        <main>
+            <div id="imgs">
+                <img id="bird" src="Bird.png"/>
+                <img id="pipe" src="Pipe.png"/>
+                <img id="UPpipe" src="Up_Pipe.png"/>
+                <img id="sky" src="Sky.jpg"/>
+                <img id="ground" src="Ground.jpg"/>
             </div>
-        </header>
 
-        <div id="imgs">
-            <img id="bird" src="Bird.png"/>
-            <img id="pipe" src="Pipe.png"/>
-            <img id="UPpipe" src="Up_Pipe.png"/>
-            <img id="sky" src="Sky.jpg"/>
-            <img id="ground" src="Ground.jpg"/>
-        </div>
+            <div>
+                <canvas id="canvas" width="320" height="498"></canvas>
+                <h4>HighScore: <span id="highscore"></span></h4>
+            </div>
+        </main>
 
-        <div id="div">
-            <canvas id="canvas" width="320" height="498"></canvas>
-            <h4>HighScore: <span id="highscore"></span></h4>
-        </div>
-        <script src="Flappy_BirdJS.js">
-        </script>
+        <script src="Flappy_BirdJS.js"></script>
     </body>
 </html>

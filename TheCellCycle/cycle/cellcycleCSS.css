@@ -1,32 +1,7 @@
-*
-{
-    font-family: fantasy;
-}
-
-header > p
-{
-    margin: 0;
-    padding: 1;
-}
-
-body
-{
-    background-color: #8c8c8c;
-}
-
-#title
-{
-    text-align: center;
-    font-size: 5vw;
-    color: #8c8c8c;
-    background-color: black;
-}
-
 #by
 {
     text-align: center;
-    font-size: 1.5vw;
-    margin: 4px;
+    font-size: 0.9vw;
 }
 
 #centered

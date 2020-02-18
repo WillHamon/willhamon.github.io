@@ -91,7 +91,7 @@ const questions = [
     correctAnswer: "d"
   },
   {
-    question: " What the two stages of cell division?",
+    question: " What are the two stages of cell division?",
     answers: {
       a: "Meiosis and Mitosis",
       b: "Interphase and Metaphase",
@@ -106,14 +106,14 @@ function buildQuestions(){
 
     questions.forEach(
         (section, num) => {
-            quiz.innerHTML += "<p>" + section.question + "</p>";
+            quiz.innerHTML += "<p class='section'>" + section.question + "</p>";
             for(letter in section.answers){
                 quiz.innerHTML += "<input type='radio' value='" + letter +"' name='question" + num +"'>" + section.answers[letter] + "<br>";
             }
         }
     );
 
-    quiz.innerHTML += "<div style='text-align: center;'><button id='submit'>submit</button></div>";
+    quiz.innerHTML += "<br><div style='text-align: center;'><button id='submit'>submit</button></div>";
 }
 
 function getCheckedValue(radioName){

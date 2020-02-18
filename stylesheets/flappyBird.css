@@ -1,0 +1,10 @@
+#canvas
+{
+    border: 2px solid black;
+}
+
+#bird, #pipe, #UPpipe, #sky, #ground
+{
+    width: 0px;
+    height: 0px;
+}
